@@ -12,3 +12,20 @@ export class LoginDto {
   @Transform(({ value }) => value.trim())
   password: string;
 }
+
+export class SignupDto {
+  @IsNotEmpty()
+  @IsString()
+  @Transform(({ value }) => value.trim())
+  username: string;
+
+  @IsNotEmpty()
+  @IsString()
+  @Transform(({ value }) => value.trim())
+  email: string;
+
+  @IsNotEmpty()
+  @IsString()
+  @Transform(({ value }) => value.trim())
+  password: string;
+}

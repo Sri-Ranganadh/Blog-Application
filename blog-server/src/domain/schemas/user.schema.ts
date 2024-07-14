@@ -13,6 +13,9 @@ export class User extends Document {
   @Prop({ type: String, required: true })
   password: string;
 
+  @Prop({ type: String, required: false })
+  description: string;
+
   @Prop({ type: [PostSchema], required: false, default: [] })
   posts: Post[];
 }
